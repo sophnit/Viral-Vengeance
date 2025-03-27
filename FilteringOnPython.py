@@ -23,8 +23,8 @@ def initialize_kalman():
     kf.F = np.array([[1, 0.01], [0, 1]])  # State transition matrix
     kf.H = np.array([[1, 0]])             # Measurement function
     kf.P *= 1000                           # Covariance matrix
-    kf.R = 5                               # Measurement noise
-    kf.Q = np.array([[0.01, 0], [0, 0.01]]) # Process noise
+    kf.R = 2                               # Measurement noise
+    kf.Q = np.array([[0.015, 0], [0, 0.015]]) # Process noise
     return kf
 
 # Initialize Kalman filters
